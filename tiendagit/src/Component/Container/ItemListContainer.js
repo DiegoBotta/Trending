@@ -20,6 +20,7 @@ const ItemListContainer = () => {
                id:"1",
                title:"Giant TCR 2021 tope de gama",
                price:"400000",
+               stock:"3"
               
            }, {
               
@@ -28,7 +29,7 @@ const ItemListContainer = () => {
                 id:"2",
                 title:"Giant TCR 2021 media gama",
                 price:"300000",
-               
+                stock:"2"
             },
             {
               
@@ -37,6 +38,7 @@ const ItemListContainer = () => {
                 id:"3",
                 title:"Giant TCR 2021 baja gama",
                 price:"100000",
+                stock:"1"
                
             }
      ]

@@ -1,6 +1,7 @@
 import React from 'react';
 import Item from '../Item/Item';
 import Bicicleta from '../../assets/bicicletaGiant.jpg'
+import Contador from '../Container/Contador/Contador'
 import { Card, Button, CardColumns, Container,Row } from 'react-bootstrap';
 
 const ItemList = ({productos}) => {
@@ -16,6 +17,7 @@ const ItemList = ({productos}) => {
         id={dato.id}
         title={dato.title}
         price={dato.price}
+        stock= {dato.stock}
         />
       
 
