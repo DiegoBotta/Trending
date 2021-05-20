@@ -9,8 +9,9 @@ const saludo = 'Bienvenidos a mi tienda online'
 function App() {
   return (
     <div>
-           <NavBar/>
+        
       <header>
+      <NavBar/>
       </header>
       <ItemListContainer greeting={saludo}/>
     </div>
