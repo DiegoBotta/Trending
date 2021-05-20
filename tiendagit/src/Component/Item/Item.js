@@ -1,15 +1,13 @@
 import React from 'react';
-import { Card, Button, CardColumns } from 'react-bootstrap';
+import { Card, Button, CardColumns,Container,Row } from 'react-bootstrap';
 
 
 const Item = ({id,price,title,description,img}) => {
 
     return (
         <>
-  
-    
-
    
+        <Card>
         <Card.Img variant="top" src={img} />
         <Card.Body>
           <Card.Title>{title} </Card.Title>
@@ -18,10 +16,7 @@ const Item = ({id,price,title,description,img}) => {
           </Card.Text>
         </Card.Body>
         <Button variant="primary">Agregar al carrito</Button>
-     
-     
- 
-
+        </Card> 
 </>
     )
 

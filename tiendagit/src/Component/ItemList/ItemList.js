@@ -1,47 +1,27 @@
 import React from 'react';
 import Item from '../Item/Item';
 import Bicicleta from '../../assets/bicicletaGiant.jpg'
-import { Card, Button, CardColumns } from 'react-bootstrap';
+import { Card, Button, CardColumns, Container,Row } from 'react-bootstrap';
 
-const ItemList = () => {
+const ItemList = ({productos}) => {
+    
+    
     return (
 <>
-<div>
-<CardColumns>
-
-<Card >
+{productos.map((dato)=>
+ 
         <Item
         img={Bicicleta}
-        description="Bicicleta Giant de ruta"
-        id="123"
-        title="Giant TCR 2021"
-        price="400000"
+        description={dato.description}
+        id={dato.id}
+        title={dato.title}
+        price={dato.price}
         />
-</Card >
-<Card >
-  <Item
-        
-        img={Bicicleta}
-        description="Bicicleta Giant de ruta"
-        id="123"
-        title="Giant TCR 2021"
-        price="400000"
-        />
-        </Card >
-        <Card >
-        <Item
+      
 
-        img={Bicicleta}
-        description="Bicicleta Giant de ruta"
-        id="123"
-        title="Giant TCR 2021"
-        price="400000"
-        />
-            </Card>
-            </CardColumns>
-        </div>
+)}  
 </>
-            )
+        )
 
 
 
