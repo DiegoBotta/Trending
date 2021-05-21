@@ -20,10 +20,11 @@ const ItemDetail = ({id,price,title,description,img,stock}) => {
         <Card.Body>
           <Card.Title>{title} </Card.Title>
           <Card.Text>
-          Valor del producto ${price}
+         
           
           </Card.Text>
-          <p>{description}</p>
+          <p>Descripción: {description}</p>
+         <p> Valor del producto ${price}</p>
           Stock disponible : {stock}
 
         </Card.Body>
@@ -35,6 +36,8 @@ const ItemDetail = ({id,price,title,description,img,stock}) => {
         </Row>
       </Container>
         </div>
+
+        
 </>
     )
 
