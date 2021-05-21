@@ -1,15 +1,16 @@
 import React from 'react';
-import Item from '../Item/Item';
+import ItemDetail from '../ItemDetail/ItemDetail';
 import Bicicleta from '../../assets/bicicletaGiant.jpg'
+import { Card, Button, CardColumns, Container,Row } from 'react-bootstrap';
 
-const ItemList = ({productos}) => {
+const ItemDetailList = ({productosDetails}) => {
     
     
     return (
 <>
-{productos.map((dato,index)=>
+{productosDetails.map((dato)=>
  
-        <Item
+        <ItemDetail
         key={dato.id}
         img={Bicicleta}
         description={dato.description}
@@ -28,4 +29,4 @@ const ItemList = ({productos}) => {
 
 }
 
-export default ItemList
+export default ItemDetailList

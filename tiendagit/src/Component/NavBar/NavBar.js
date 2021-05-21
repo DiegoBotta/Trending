@@ -4,24 +4,26 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import CartWidget from "../CartWidget/CartWidget";
+import ItemListContainer from '../Container/ItemListContainer'
+import {BrowserRouter,Switch,Route,Link} from 'react-router-dom'
+
 export default function App() {
   return (
     <>
      <Navbar bg="light" expand="lg">
-  <Navbar.Brand href="#home">TiendaMia</Navbar.Brand>
+     <Link to={`/`}> <Navbar.Brand href="#home">TiendaMia</Navbar.Brand></Link>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link href="#home">Bicicletas completas</Nav.Link>
-      <Nav.Link href="#link">Componentes</Nav.Link>
-      <Nav.Link href="#link2">Nutricion</Nav.Link>
+    <Link to={`/category/bicicletas`}>   <Nav.Link href="#home">Bicicletas completas</Nav.Link></Link>
+    <Link to={`/category/componentes`}>   <Nav.Link href="#home">Componentes</Nav.Link></Link>
     
     
     </Nav>
 
     
   </Navbar.Collapse>
-  <CartWidget/>
+  <Link to={`/Cart`}>  <CartWidget/></Link>
 </Navbar>
 
     </>
