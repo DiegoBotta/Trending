@@ -1,11 +1,12 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { Card, Button,Container,Row,Col} from 'react-bootstrap';
 import Contador from '../Container/Contador/Contador'
 
 
 const ItemDetail = ({id,price,title,description,img,stock}) => {
 
-    return (
+  return (
+      
         <>
 <div className="text-center">
 <Container>
@@ -28,8 +29,6 @@ const ItemDetail = ({id,price,title,description,img,stock}) => {
           Stock disponible : {stock}
 
         </Card.Body>
-        <Contador/>
-        <Button variant="primary">Agregar al carrito</Button>
         </Card> 
         </Col>
           <Col/>

@@ -3,7 +3,8 @@ import Item from '../Item/Item';
 import Bicicleta from '../../assets/bicicletaGiant.jpg'
 
 const ItemList = ({productos}) => {
-    
+
+        
     
     return (
 <>
@@ -27,5 +28,6 @@ const ItemList = ({productos}) => {
 
 
 }
+
 
 export default ItemList

@@ -19,8 +19,8 @@ const Item = ({id,price,title,description,img,stock}) => {
           Stock disponible : {stock}
 
         </Card.Body>
-        <Contador/>
-        <Button variant="primary">Agregar al carrito</Button>
+       
+      
         <Link to={`/item/${id}`}>
         <Button variant="warning">Ver más</Button>
         </Link>

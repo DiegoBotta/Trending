@@ -3,6 +3,7 @@ import Bicicleta from '../../assets/bicicletaGiant.jpg'
 import { Card, Button, CardColumns, Container,Row } from 'react-bootstrap';
 import {useParams} from 'react-router-dom'
 import ItemDetailList from '../ItemDetail/ItemDetailList'
+import Contador from '../Container/Contador/Contador'
 
 const ItemDetailContainer = () => {
 
@@ -89,12 +90,13 @@ console.log("HUBO PROBLEMAS")
 },)
          
 
-
 return(
      <>
             {item.length > 0 ?    
-         
+         <div>
                    <ItemDetailList productosDetails={item} /> 
+                   
+                   </div>
                   
                    :
            "Cargando..."}

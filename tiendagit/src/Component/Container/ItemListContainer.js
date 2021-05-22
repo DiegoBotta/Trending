@@ -3,7 +3,6 @@ import ItemList from '../ItemList/ItemList';
 import Bicicleta from '../../assets/bicicletaGiant.jpg'
 import {  CardColumns } from 'react-bootstrap';
 
-
 const ItemListContainer = () => {
 
      const [datos,setDatos] = useState([]);

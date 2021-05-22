@@ -7,10 +7,11 @@ import {BrowserRouter,Switch,Route} from 'react-router-dom'
 import ItemDetailContainer from './Component/ItemDetail/ItemDetailContainer'
 import CartWidget from './Component/CartWidget/CartWidget'
 import ItemCategoryContainer from './Component/Container/Category/CategoryListContainer'
-
+import Carrito from './Component/Container/Context/CartContext'
 function App() {
   return (
     <BrowserRouter>
+        <Carrito>
      <NavBar/>
      <Switch>
        <Route path='/' exact component={ItemListContainer}>
@@ -22,6 +23,7 @@ function App() {
       <Route path='/item/:id' exact component={ItemDetailContainer}></Route>
       <Route path='/cart' exact component={CartWidget}></Route>
       </Switch>
+      </Carrito>
     </BrowserRouter>
    );
 }

@@ -1,33 +1,42 @@
 import react,{useState} from 'react'
+import {  Button} from 'react-bootstrap';
+import ItemDetailList from '../../ItemDetail/ItemDetailList'
 
 
-const Contador =(()=>{
-const [value,setValue] = useState(0)
+const Contador =({id,price,title,description,img,stock})=>{
     
-function add(){
-    setValue(value +1)
+const [count,setCount] = useState(0)
+let prueba = parseInt(stock)
+
+function add() {
+    setCount(count + 1)
+
 }
 function sub(){
-    setValue(value -1)
+    setCount(count -1)
 
 }
-return(  <>
+
+return( 
+     <>
 <div style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center"}}>
-    <p>Cantidad de productos seleccionados: {value}</p></div>
+
+    <p>Cantidad de productos seleccionados: {count}</p></div>
    <div style={{
         display: "flex",
         justifyContent: "center",
-        alignItems: "center"}}
->  
-<p><button onClick={add}>Agregar</button></p>
-<p><button onClick={sub}>Quitar</button></p>
+        alignItems: "center"}}>  
+<p><button onClick={add} disabled={count === prueba}>Agregar</button></p>
+<p><button onClick={sub} disabled={count === 0} >Quitar</button></p>
+<p><Button variant="primary">Agregar al carrito</Button></p>
+
 </div>
 </>
 )  }
-)
+
 
 export default Contador
 
