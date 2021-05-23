@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -7,8 +7,16 @@ import CartWidget from "../CartWidget/CartWidget";
 import ItemListContainer from '../Container/ItemListContainer'
 import {BrowserRouter,Switch,Route,Link} from 'react-router-dom'
 import Cart from '../../assets/Cart.png'
+import {CartContext,Carrito} from '../../Component/Container/Context/CartContext'
+import { useAccordionToggle } from "react-bootstrap";
+import Cartel from '../NavBar/terminarCompra'
+
+
 
 export default function App() {
+  const[cart,setCart] = useContext(CartContext)
+
+
   return (
     <>
      <Navbar bg="light" expand="lg">
@@ -24,7 +32,10 @@ export default function App() {
 
     
   </Navbar.Collapse>
-  <Link to={`/Cart`}> <img src={Cart} height="40" /></Link>
+  <div className= "pr-3">
+  <Link to={`/Cart`} > <img style={{display: cart.length !== 0 ? 'block' : 'none' }} src={Cart} height="40" /></Link>
+  </div>
+  
 </Navbar>
 
     </>

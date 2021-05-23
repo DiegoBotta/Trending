@@ -71,8 +71,8 @@ return(
         display: "flex",
         justifyContent: "center",
         alignItems: "center"}}>  
-<p><button onClick={add} disabled={count === parseInt(valueProduct.stock)}>Agregar</button></p>
-<p><button onClick={sub} disabled={count === 0} >Quitar</button></p>
+<p><button className="mr-1" onClick={add} disabled={count === parseInt(valueProduct.stock)}>Agregar</button></p>
+<p><button className="mr-1" onClick={sub} disabled={count === 0} >Quitar</button></p>
 <p><Button onClick={()=>Agregado(valueProduct,count)} variant="primary">Agregar al carrito</Button></p>
 
 </div>
