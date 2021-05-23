@@ -14,9 +14,9 @@ const ItemDetailContainer = () => {
       const productosDetails =[
           {   
                img:{Bicicleta},
-              description:"Bicicleta Giant de ruta tope de gama",
+              description:"La bicicleta de mayor rendimiento de la marca.",
                 id:"1",
-                title:"Giant TCR 2021 tope de gama",
+                title:"Giant TCR Advanced SL",
                 price:"400000",
                 stock:"3",
                 Categoria: "bicicleta"
