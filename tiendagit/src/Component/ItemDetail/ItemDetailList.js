@@ -15,7 +15,6 @@ const ItemDetailList = ({productosDetails}) => {
 {productosDetails.map((dato)=>
  <div className="container">
         <ItemDetail
-        key={dato.id}
         img={Bicicleta}
         description={dato.description}
         id={dato.id}
