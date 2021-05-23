@@ -6,6 +6,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import CartWidget from "../CartWidget/CartWidget";
 import ItemListContainer from '../Container/ItemListContainer'
 import {BrowserRouter,Switch,Route,Link} from 'react-router-dom'
+import Cart from '../../assets/Cart.png'
 
 export default function App() {
   return (
@@ -23,7 +24,7 @@ export default function App() {
 
     
   </Navbar.Collapse>
-  <Link to={`/Cart`}>  <CartWidget/></Link>
+  <Link to={`/Cart`}> <img src={Cart} height="40" /></Link>
 </Navbar>
 
     </>

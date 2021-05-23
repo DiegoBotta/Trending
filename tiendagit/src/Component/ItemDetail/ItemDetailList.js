@@ -3,7 +3,6 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 import Bicicleta from '../../assets/bicicletaGiant.jpg'
 import { Card, Button, CardColumns, Container,Row } from 'react-bootstrap';
 import Contador from '../Container/Contador/Contador'
-
 const ItemDetailList = ({productosDetails}) => {
         
 
@@ -21,13 +20,13 @@ const ItemDetailList = ({productosDetails}) => {
         stock= {dato.stock}
         />
        
-        <Contador 
-                 img={Bicicleta}
+        <Contador    valueProduct={dato}
+        /*            img={Bicicleta}
                  description={dato.description}
                  id={dato.id}
                  title={dato.title}
                  price={dato.price}
-                 stock= {dato.stock}
+                 stock= {dato.stock}*/
                                 /></div>
 )}  
 </>

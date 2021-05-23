@@ -9,22 +9,24 @@ import CartWidget from './Component/CartWidget/CartWidget'
 import ItemCategoryContainer from './Component/Container/Category/CategoryListContainer'
 import Carrito from './Component/Container/Context/CartContext'
 function App() {
-  return (
+  return (       
+
     <BrowserRouter>
-        <Carrito>
-     <NavBar/>
+     <Carrito>   <NavBar/>
      <Switch>
+     
        <Route path='/' exact component={ItemListContainer}>
       <ItemListContainer />
+      
       </Route>
       <Route path='/category/:id' exact component={ItemCategoryContainer}>
-      <ItemCategoryContainer />
+        <ItemCategoryContainer />
       </Route>
       <Route path='/item/:id' exact component={ItemDetailContainer}></Route>
       <Route path='/cart' exact component={CartWidget}></Route>
-      </Switch>
-      </Carrito>
-    </BrowserRouter>
+      </Switch> </Carrito>
+    </BrowserRouter>     
+
    );
 }
 

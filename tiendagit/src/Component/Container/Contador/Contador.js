@@ -1,13 +1,13 @@
-import react,{useState} from 'react'
+import react,{useState,useContext} from 'react'
 import {  Button} from 'react-bootstrap';
 import ItemDetailList from '../../ItemDetail/ItemDetailList'
+import {CartContext,Carrito} from '../Context/CartContext'
 
 
-const Contador =({id,price,title,description,img,stock})=>{
-    
+const Contador =(
+{valueProduct} )=>{
+    const[cart,setCart] = useContext(CartContext)
 const [count,setCount] = useState(0)
-let prueba = parseInt(stock)
-
 function add() {
     setCount(count + 1)
 
@@ -16,6 +16,48 @@ function sub(){
     setCount(count -1)
 
 }
+const Agregado = (item,count) =>{
+    count !== 0 ? PushToCart(item,count) : alert("Tienes que elegir una cantidad")
+}
+
+const isInCart= (item) =>{
+
+    const enElCart = cart.find(x=>x.id === item.id)
+    if(enElCart !== undefined) {
+        alert("pase por true")
+
+        return true 
+    } else {alert("pase por false")
+    return false 
+}}
+
+const Evalua = (item,count) => {
+    cart.forEach( i =>{
+        if(i.id === item.id){
+            if(i.cantidad !== (i.cantidad + count)){
+                i.cantidad =  count
+            }
+        }
+    })
+    console.log(cart)
+
+  }
+
+    
+ const PushToCart = (item,count) => {
+    if(isInCart(item))
+    {
+        Evalua(item,count)
+        console.log(...cart)
+        alert("Ya has comprado este producto. Hemos actualizado la cantidad por la ultima elegida.")
+
+    } else {    setCart([...cart,{...item,"cantidad":count}])
+  alert("Se añadió el producto a su carrito")
+  
+}
+
+}
+
 
 return( 
      <>
@@ -29,9 +71,9 @@ return(
         display: "flex",
         justifyContent: "center",
         alignItems: "center"}}>  
-<p><button onClick={add} disabled={count === prueba}>Agregar</button></p>
+<p><button onClick={add} disabled={count === parseInt(valueProduct.stock)}>Agregar</button></p>
 <p><button onClick={sub} disabled={count === 0} >Quitar</button></p>
-<p><Button variant="primary">Agregar al carrito</Button></p>
+<p><Button onClick={()=>Agregado(valueProduct,count)} variant="primary">Agregar al carrito</Button></p>
 
 </div>
 </>
