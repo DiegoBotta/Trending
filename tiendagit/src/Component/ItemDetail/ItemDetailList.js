@@ -1,6 +1,5 @@
 import React,{useEffect, useState, useContext} from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
-import Bicicleta from '../../assets/bicicletaGiant.jpg'
 import { Card, Button, CardColumns, Container,Row } from 'react-bootstrap';
 import Contador from '../Container/Contador/Contador'
 import {BrowserRouter,Switch,Route,Link} from 'react-router-dom'
@@ -15,7 +14,7 @@ const ItemDetailList = ({productosDetails}) => {
 {productosDetails.map((dato)=>
  <div className="container">
         <ItemDetail
-        img={Bicicleta}
+        img={dato.img}
         description={dato.description}
         id={dato.id}
         title={dato.title}

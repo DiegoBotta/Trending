@@ -59,7 +59,7 @@ const texto = () => {
         {cart.map((dato)=>
 
   <tr>
-    <td><img src={Bicicleta} height="70" /></td>
+    <td><img src={dato.img} height="70" /></td>
     <td>{dato.title}</td>
     <td>{dato.description}</td>
     <td>{dato.cantidad}</td>

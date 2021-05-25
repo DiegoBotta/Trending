@@ -1,6 +1,5 @@
 import React from 'react';
 import Item from '../Item/Item';
-import Bicicleta from '../../assets/bicicletaGiant.jpg'
 
 const ItemList = ({productos}) => {
 
@@ -8,11 +7,11 @@ const ItemList = ({productos}) => {
     
     return (
 <>
-{productos.map((dato,index)=>
+{productos.map((dato)=>
  
         <Item
         key={dato.id}
-        img={Bicicleta}
+        img={dato.img}
         description={dato.description}
         id={dato.id}
         title={dato.title}

@@ -6,8 +6,8 @@ import './index.css';
 import {BrowserRouter,Switch,Route} from 'react-router-dom'
 import ItemDetailContainer from './Component/ItemDetail/ItemDetailContainer'
 import CartWidget from './Component/CartWidget/CartWidget'
-import ItemCategoryContainer from './Component/Container/Category/CategoryListContainer'
 import Carrito from './Component/Container/Context/CartContext'
+import ItemCategoryContainer from './Component/Container/Category/CategoryListContainer'
 function App() {
   return (       
 

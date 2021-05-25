@@ -15,9 +15,9 @@ const ItemDetail = ({id,price,title,description,img,stock}) => {
           <Col>
         <Card>
         <Card.Img variant="right" src={img}
-        width={300}
-    height={200}
-    alt="171x180" /> 
+        width={330}
+    height={250}
+    alt="330x250" /> 
         <Card.Body>
           <Card.Title>{title} </Card.Title>
           <Card.Text>
