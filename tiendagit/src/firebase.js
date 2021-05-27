@@ -3,7 +3,7 @@ import 'firebase/firestore'
 
 const app = firebase.initializeApp(
 {
-    apiKey: "AIzaSyBpfQNK2JmWu9vSvrKaYBeV45d8Ek0oQpU",
+    apiKey: process.env.REACT_APP_API_KEY,
     authDomain: "mitienda-1952.firebaseapp.com",
     projectId: "mitienda-1952",
     storageBucket: "mitienda-1952.appspot.com",
