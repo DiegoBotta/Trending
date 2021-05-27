@@ -1,6 +1,5 @@
-import React,{useContext} from 'react';
-import { Card, Button,Container,Row,Col} from 'react-bootstrap';
-import Contador from '../Container/Contador/Contador'
+import React from 'react';
+import { Card,Container,Row,Col} from 'react-bootstrap';
 
 
 const ItemDetail = ({id,price,title,description,img,stock}) => {

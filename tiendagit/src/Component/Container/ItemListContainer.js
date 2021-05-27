@@ -1,6 +1,5 @@
 import React, { useState,useEffect  } from 'react';
 import ItemList from '../ItemList/ItemList';
-import Bicicleta from '../../assets/bicicletaGiant.jpg'
 import {  CardColumns } from 'react-bootstrap';
 import {getFirestore} from '../../firebase'
 const ItemListContainer = () => {
@@ -14,8 +13,6 @@ const ItemListContainer = () => {
           const itemsCollection = db.collection("Items")
           itemsCollection.get()
           .then((querySnapShot)=>{
-               querySnapShot.size === 0 ? console.log("No hay items"):
-               console.log(`Hay ${(querySnapShot.size)} items`)
                const documentos = querySnapShot.docs.map((doc)=> {
                     return {
                          id: doc.id,
@@ -23,8 +20,7 @@ const ItemListContainer = () => {
                     }} );
                         setDatos(documentos)
                })
-          .catch((err)=>console.log("ocurrio un error"))
-          .finally(()=>console.log("aca iria el loading"))
+          .catch((err)=>console.log("ocurrio un error"+ err))
      },[])
 
      return(

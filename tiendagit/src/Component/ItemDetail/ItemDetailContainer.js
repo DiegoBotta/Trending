@@ -1,9 +1,6 @@
 import React, { useState,useEffect  } from 'react';
-import Bicicleta from '../../assets/bicicletaGiant.jpg'
-import { Card, Button, CardColumns, Container,Row } from 'react-bootstrap';
 import {useParams} from 'react-router-dom'
 import ItemDetailList from '../ItemDetail/ItemDetailList'
-import Contador from '../Container/Contador/Contador'
 import {getFirestore} from '../../firebase'
 
 
@@ -33,7 +30,7 @@ const ItemDetailContainer = () => {
                })
           .catch((err)=>console.log("ocurrio un error"))
           .finally(()=>console.log("aca iria el loading"))
-     },[])
+     })
 
 return(
      <>
