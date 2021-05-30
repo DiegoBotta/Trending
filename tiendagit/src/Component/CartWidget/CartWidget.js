@@ -1,9 +1,6 @@
-import react,{useState,useContext, useEffect} from 'react'
-import Cart from '../../assets/Cart.png'
-import {CartContext,Carrito} from '../Container/Context/CartContext'
-import ItemDetail from '../ItemDetail/ItemDetail'
-import Bicicleta from '../../assets/bicicletaGiant.jpg'
-import { Form,Card,Table, Button, CardColumns,Container,Row } from 'react-bootstrap';
+import React,{useState,useContext, useEffect} from 'react'
+import {CartContext} from '../Container/Context/CartContext'
+import { Table } from 'react-bootstrap';
 import {getFirestore} from '../../firebase'
 import firebase from 'firebase/app'
 const CartWidget = () => {
@@ -24,29 +21,16 @@ const db= getFirestore()
 const orders= db.collection("orders")
 
 
-const deleteTask = (taskToDelete) => {
-    console.log("Llegue al delete")
-    console.log(taskToDelete.id)
+const deleteTask = (taskToDelete) => { 
     let cartNew = cart.filter(i => i.id !== taskToDelete.id)
-    console.log(cartNew)
-
-    setCart(cartNew)
-
-    console.log(cart)
-
+    setCart(cartNew)   
     }
 
-    useEffect(()=>{
+ useEffect(()=>{
       let costoFinal = cart.reduce((a,v) =>  a = a + (parseInt(v.price* v.cantidad)) , 0 )
       setTotal(costoFinal)
     },  [cart])
-/*const calcularTotal = () => {
-   let costoFinal = cart.reduce((a,v) =>  a = a + (parseInt(v.price* v.cantidad)) , 0 )
-   setTotal(costoFinal)
-   console.log(total)
-   console.log(costoFinal)
-creaOrden()
-}*/
+
 
 const creaOrden = () => {
  let order = {
@@ -57,67 +41,14 @@ const creaOrden = () => {
    total
   }
  cart.length && setOrder(order)
-console.log(order)
 }
 
 useEffect(()=> {
  if( order.cart ){
    orders.add(order)
    .then((res)=> setId(res.id))
-   console.log(id)
  }},[order])
 
-
-
-const texto = () => {
-    if(cart.length !== 0){
-      return  <h1>tenes compras</h1>
-    } else {
-     return   <h1>no tenes ninguna compra</h1>
-    }
-
-}
-
-function Form2() {
-  function handleChange(evt) {
-      const value = evt.target.value;
-      setState({
-        ...state,
-        [evt.target.name]: value,
-        [evt.target.name]: value
-      }); console.log(state)
-    }
-
-const [state, setState] = useState({
-  firstName: "",
-  lastName: ""
-})
-return (
-    <>
-  <form>
-    <label>
-      First name
-      <input
-        type="text"
-        name="firstName"
-        value={state.firstName}
-        onChange={handleChange}
-      />
-    </label>
-    <label>
-      Last name
-      <input
-        type="text"
-        name="lastName"
-        value={state.lastName}
-        onChange={handleChange}
-      />
-    </label>
-  
-  </form>
-  </>
-);
-}
 
     return(
         <>

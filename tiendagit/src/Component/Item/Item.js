@@ -1,6 +1,5 @@
 import React from 'react';
-import { Card, Button, CardColumns,Container,Row } from 'react-bootstrap';
-import Contador from '../Container/Contador/Contador'
+import { Card, Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom'
 
 

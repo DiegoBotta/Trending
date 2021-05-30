@@ -1,9 +1,8 @@
-import React,{useEffect, useState, useContext} from 'react';
+import React,{useContext} from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
-import { Card, Button, CardColumns, Container,Row } from 'react-bootstrap';
 import Contador from '../Container/Contador/Contador'
-import {BrowserRouter,Switch,Route,Link} from 'react-router-dom'
-import {CartContext,Carrito} from '../../Component/Container/Context/CartContext'
+import {Link} from 'react-router-dom'
+import {CartContext} from '../../Component/Container/Context/CartContext'
 
 const ItemDetailList = ({productosDetails}) => {
     const[cart,setCart] = useContext(CartContext)
@@ -22,12 +21,6 @@ const ItemDetailList = ({productosDetails}) => {
         stock= {dato.stock}/>
 
         <Contador    valueProduct={dato}
-        /*            img={Bicicleta}
-                 description={dato.description}
-                 id={dato.id}
-                 title={dato.title}
-                 price={dato.price}
-                 stock= {dato.stock}*/
                                 />
  <div class="row justify-content-center">
                                 
