@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React,{useState,useContext} from 'react'
 import {Button} from 'react-bootstrap';
 import {CartContext} from '../Context/CartContext'
@@ -15,6 +16,11 @@ import {CartContext,Carrito} from '../Context/CartContext'
 >>>>>>> parent of ce5f145 (commit)
 =======
 >>>>>>> parent of ce5f145 (commit)
+=======
+import React,{useState,useContext} from 'react'
+import {Button} from 'react-bootstrap';
+import {CartContext} from '../Context/CartContext'
+>>>>>>> parent of af8319b (1)
 =======
 import React,{useState,useContext} from 'react'
 import {Button} from 'react-bootstrap';
