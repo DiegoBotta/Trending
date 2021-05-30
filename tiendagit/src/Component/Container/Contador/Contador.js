@@ -1,12 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React,{useState,useContext} from 'react'
 import {Button} from 'react-bootstrap';
 import {CartContext} from '../Context/CartContext'
 =======
+=======
+>>>>>>> parent of ce5f145 (commit)
 import react,{useState,useContext} from 'react'
 import {  Button} from 'react-bootstrap';
 import ItemDetailList from '../../ItemDetail/ItemDetailList'
 import {CartContext,Carrito} from '../Context/CartContext'
+<<<<<<< HEAD
+>>>>>>> parent of ce5f145 (commit)
+=======
 >>>>>>> parent of ce5f145 (commit)
 
 
