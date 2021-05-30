@@ -2,9 +2,14 @@ import React,{useContext} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import {Link} from 'react-router-dom'
+import NavDropdown from "react-bootstrap/NavDropdown";
+import CartWidget from "../CartWidget/CartWidget";
+import ItemListContainer from '../Container/ItemListContainer'
+import {BrowserRouter,Switch,Route,Link} from 'react-router-dom'
 import Cart from '../../assets/Cart.png'
-import {CartContext} from '../../Component/Container/Context/CartContext'
+import {CartContext,Carrito} from '../../Component/Container/Context/CartContext'
+import { useAccordionToggle } from "react-bootstrap";
+import Cartel from '../NavBar/terminarCompra'
 
 
 

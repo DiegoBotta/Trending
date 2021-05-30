@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React,{useState,useContext} from 'react'
 import {Button} from 'react-bootstrap';
 import {CartContext} from '../Context/CartContext'
+=======
+import react,{useState,useContext} from 'react'
+import {  Button} from 'react-bootstrap';
+import ItemDetailList from '../../ItemDetail/ItemDetailList'
+import {CartContext,Carrito} from '../Context/CartContext'
+>>>>>>> parent of ce5f145 (commit)
 
 
 const Contador =(
