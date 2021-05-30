@@ -1,5 +1,5 @@
 import React,{useState,useContext} from 'react'
-import {  Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import {CartContext} from '../Context/CartContext'
 
 
@@ -16,7 +16,7 @@ function sub(){
 
 }
 const Agregado = (item,count) =>{
-    count !== 0 ? PushToCart(item,count) : alert("Tienes que elegir una cantidad")
+ count !== 0 ? PushToCart(item,count) : alert("Tienes que elegir una cantidad")
 }
 
 const isInCart= (item) =>{
