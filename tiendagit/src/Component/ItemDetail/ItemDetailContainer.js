@@ -12,21 +12,15 @@ const ItemDetailContainer = () => {
      useEffect(()=>{
           const db = getFirestore();
           const itemCollection = db.collection("Items")
-          console.log(id)
-          console.log(itemCollection)
           itemCollection.get()
           .then((querySnapShot)=>{
-               querySnapShot.size === 0 ? console.log("No hay items"):
-               console.log(`Hay ${(querySnapShot.size)} items`)
-               const documentos = querySnapShot.docs.map((doc)=> {
+                            const documentos = querySnapShot.docs.map((doc)=> {
                     return {
                          id: doc.id,
                          ...doc.data()
                     }} );
-                    console.log(documentos)
                    const documentosFiltrados = documentos.find(i => i.id === id)
                     setItem([documentosFiltrados])
-                    console.log(documentosFiltrados)
                })
           .catch((err)=>console.log("ocurrio un error"))
           .finally(()=>console.log("aca iria el loading"))

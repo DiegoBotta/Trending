@@ -17,22 +17,16 @@ const ItemCategoryContainer = () => {
           console.log(itemCollectionCategory)
           itemCollectionCategory.get()
           .then((querySnapShot)=>{
-               querySnapShot.size === 0 ? console.log("No hay items"):
-               console.log(`Hay ${(querySnapShot.size)} items`)
                const documentosCategory = querySnapShot.docs.map((doc)=> {
                     return {
                          id: doc.id,
                          ...doc.data()
                     }} );
-                    console.log(documentosCategory)
                    const documentosFiltradosCategory = documentosCategory.filter(i => i.categoryID === id)
                    setCategoria(documentosFiltradosCategory)
-                    console.log(categoria)
                })
-          .catch((err)=>console.log("ocurrio un error"))
-          .finally(()=>console.log("aca iria el loading"))
+     
      },[id])
-     console.log(categoria)
 
 return(
      <>

@@ -1,32 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React,{useState,useContext} from 'react'
-import {Button} from 'react-bootstrap';
-import {CartContext} from '../Context/CartContext'
-=======
-=======
->>>>>>> parent of ce5f145 (commit)
-import react,{useState,useContext} from 'react'
 import {  Button} from 'react-bootstrap';
-import ItemDetailList from '../../ItemDetail/ItemDetailList'
-import {CartContext,Carrito} from '../Context/CartContext'
-<<<<<<< HEAD
->>>>>>> parent of ce5f145 (commit)
-=======
->>>>>>> parent of ce5f145 (commit)
-=======
-import React,{useState,useContext} from 'react'
-import {Button} from 'react-bootstrap';
 import {CartContext} from '../Context/CartContext'
->>>>>>> parent of af8319b (1)
-=======
-import React,{useState,useContext} from 'react'
-import {Button} from 'react-bootstrap';
-import {CartContext} from '../Context/CartContext'
->>>>>>> parent of af8319b (1)
-
 
 const Contador =(
 {valueProduct} )=>{
@@ -41,17 +15,17 @@ function sub(){
 
 }
 const Agregado = (item,count) =>{
- count !== 0 ? PushToCart(item,count) : alert("Tienes que elegir una cantidad")
+count !== 0 ? PushToCart(item,count) : alert("Tienes que elegir una cantidad")
 }
+
 
 const isInCart= (item) =>{
 
     const enElCart = cart.find(x=>x.id === item.id)
     if(enElCart !== undefined) {
-        alert("pase por true")
 
         return true 
-    } else {alert("pase por false")
+    } else {
     return false 
 }}
 
@@ -73,6 +47,7 @@ const Evalua = (item,count) => {
     {
         Evalua(item,count)
         console.log(...cart)
+        return true
         alert("Ya has comprado este producto. Hemos actualizado la cantidad por la ultima elegida.")
 
     } else {    setCart([...cart,{...item,"cantidad":count}])
